@@ -1,4 +1,6 @@
-FROM ruby:2.2
+FROM ubuntu:15.10
 
-RUN apt-get update -qq && apt-get install -y build-essential libmysqlclient-dev
-RUN apt-get update -qq && apt-get install -y imagemagick
+ADD . /code
+WORKDIR /code
+
+RUN pwd
