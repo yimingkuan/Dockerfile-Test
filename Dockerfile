@@ -4,3 +4,5 @@ ADD . /opt/projects/app/platform
 WORKDIR /opt/projects/app/platform
 
 RUN pwd
+RUN cat asd
+RUN ls
