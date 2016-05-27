@@ -1,3 +1,1 @@
-FROM alpine
-
-RUN pwd
+FROM nginx:stable-alpine
