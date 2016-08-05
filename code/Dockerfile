@@ -1,6 +1,10 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 
-ADD . /opt/projects/app/platform
-WORKDIR /opt/projects/app/platform
+# set up environment
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN cat asd
+# update repos/ppas...
+RUN apt-get update 
+RUN apt-get install -y python-software-properties software-properties-common
+RUN apt-add-repository -y ppa:x2go/stable
+RUN apt-get update 
